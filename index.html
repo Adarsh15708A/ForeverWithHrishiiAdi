@@ -24,8 +24,21 @@
       to { transform: translateY(-10vh); opacity: 1; }
     }
     .message {
-      position: absolute; bottom: 20px;
+      position: absolute; bottom: 80px;
       width: 100%; font-size: 20px; color: #d6336c;
+    }
+    .drive-button {
+      position: absolute; bottom: 20px;
+      left: 50%; transform: translateX(-50%);
+      background-color: #d6336c; color: white;
+      border: none; padding: 10px 20px;
+      font-size: 18px; border-radius: 30px;
+      cursor: pointer; text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+    }
+    .drive-button:hover {
+      background-color: #b02557;
     }
     audio { display: none; }
   </style>
@@ -35,15 +48,23 @@
   <div class="message">
     Thank you for blooming in my life. I love you forever, Hrishi ❤️
   </div>
+
+  <!-- 🎵 Music -->
   <audio autoplay loop>
-    <source src="https://dl.dropboxusercontent.com/scl/fi/6og4gw2ow8qqkqc3j4jxn/Tum-Hi-Ho-From-Aashiqui-2.mp3" type="audio/mpeg">
+    <source src="Tum-Hi-Ho.mp3" type="audio/mpeg">
   </audio>
+
+  <!-- 🌸 Click Here Jaanuuu Button -->
+  <a class="drive-button" href="https://drive.google.com/drive/folders/1cWF7gmLEaBAVNVLhWf8g6MAZXOclQOYj?usp=drive_link" target="_blank">
+    Click Here Jaanuuu ❤️
+  </a>
+
   <script>
     const messages = [
       "I Love You",
       "Happy Anniversary",
       "You make my life complete",
-      "Hrishi & Adi ❤️",
+      "Hrishi & Adi",
       "Forever Together"
     ];
     function createRose() {
