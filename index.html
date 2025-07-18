@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hrishi & Adi – Happy 5th Anniversary 🌹</title>
+  <title>Hrishi ❤️ Adi – Forever</title>
   <style>
     body {
-      margin: 0; padding: 0;
+      margin: 0;
+      padding: 0;
       background: radial-gradient(circle, #ffe6e6, #fff);
       overflow: hidden;
       font-family: 'Segoe UI', sans-serif;
       text-align: center;
     }
-    h1 { margin-top: 20px; color: #d6336c; }
+    h1 {
+      margin-top: 20px;
+      color: #d6336c;
+    }
     .rose {
       position: absolute;
       font-size: 30px;
@@ -20,51 +24,62 @@
       opacity: 0;
     }
     @keyframes rise {
-      from { transform: translateY(100vh); opacity: 0; }
-      to { transform: translateY(-10vh); opacity: 1; }
+      from {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(-10vh);
+        opacity: 1;
+      }
     }
     .message {
-      position: absolute; bottom: 80px;
-      width: 100%; font-size: 20px; color: #d6336c;
+      position: absolute;
+      bottom: 60px;
+      width: 100%;
+      font-size: 20px;
+      color: #d6336c;
     }
-    .drive-button {
-      position: absolute; bottom: 20px;
-      left: 50%; transform: translateX(-50%);
-      background-color: #d6336c; color: white;
-      border: none; padding: 10px 20px;
-      font-size: 18px; border-radius: 30px;
-      cursor: pointer; text-decoration: none;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: background-color 0.3s ease;
+    .drive-link {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
     }
-    .drive-button:hover {
-      background-color: #b02557;
+    .drive-link a {
+      text-decoration: none;
+      background: #d6336c;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 18px;
+      font-weight: bold;
     }
-    audio { display: none; }
+    audio {
+      display: none;
+    }
   </style>
 </head>
 <body>
-  <h1>🌹 Happy 5th Anniversary – Hrishi & Adi 🌹</h1>
+  <h1>🌹 Happy 5th Anniversary – Hrishi ❤️ Adi 🌹</h1>
+
   <div class="message">
     Thank you for blooming in my life. I love you forever, Hrishi ❤️
   </div>
 
-  <!-- 🎵 Music -->
-  <audio autoplay loop>
-    <source src="Tum-Hi-Ho.mp3" type="audio/mpeg">
-  </audio>
+  <div class="drive-link">
+    <a href="https://drive.google.com/drive/folders/1cWF7gmLEaBAVNVLhWf8g6MAZXOclQOYj?usp=drive_link" target="_blank">Click Here Jaaanuuu ❤️</a>
+  </div>
 
-  <!-- 🌸 Click Here Jaanuuu Button -->
-  <a class="drive-button" href="https://drive.google.com/drive/folders/1cWF7gmLEaBAVNVLhWf8g6MAZXOclQOYj?usp=drive_link" target="_blank">
-    Click Here Jaanuuu ❤️
-  </a>
+  <audio autoplay loop>
+    <source src="https://www.dropbox.com/scl/fi/6og4gw2ow8qqkqc3j4jxn/Tum-Hi-Ho-From-Aashiqui-2.mp3?rlkey=m66eqbg4t250wh13j61h380uv&st=tu0hzarq&dl=1" type="audio/mpeg">
+  </audio>
 
   <script>
     const messages = [
       "I Love You",
       "Happy Anniversary",
       "You make my life complete",
-      "Hrishi & Adi",
+      "Hrishi ❤️ Adi",
       "Forever Together"
     ];
     function createRose() {
