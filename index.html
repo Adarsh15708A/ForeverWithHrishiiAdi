@@ -31,6 +31,7 @@
       width: 90%; margin: 20px auto;
       font-size: 18px; color: #b30059;
       line-height: 1.6;
+      min-height: 150px;
     }
     .drive-button {
       position: absolute; bottom: 10px;
@@ -46,15 +47,7 @@
 <body>
   <h1>🌹 Happy 5th Anniversary – Hrishi ❤️ Adi 🌹</h1>
 
-  <div class="shayari">
-    ❤️ “Hum dono ka pyaar na bas lafzon me hai, na hi sirf ehsaason me…<br>
-    Ye to wo rishta hai jo rooh tak utar gaya hai…<br>
-    Jitna sochu utna hi gehra lagta hai,<br>
-    Jaise dil ne sirf aap ko chahne ke liye dhadakna seekha ho.” ❤️<br><br>
-
-    🌸 “Aap ki yaadon ka ek kone me bhi itna sukoon hai,<br>
-    Sochta hoon agar aap saamne ho to poori duniya kitni haseen lagne lagegi…” 🌸
-  </div>
+  <div class="shayari" id="shayari"></div>
 
   <a class="drive-button" href="https://drive.google.com/drive/folders/1cWF7gmLEaBAVNVLhWf8g6MAZXOclQOYj?usp=drive_link" target="_blank">
     Click Here Jaanuuu 💖
@@ -65,6 +58,7 @@
   </audio>
 
   <script>
+    // Flying roses
     const messages = [
       "I Love You 🌹",
       "Happy Anniversary 🌹",
@@ -81,6 +75,26 @@
       setTimeout(() => r.remove(), 10000);
     }
     setInterval(createRose, 700);
+
+    // Typing effect
+    const shayariText = 
+      "❤️ “Hum dono ka pyaar na bas lafzon me hai, na hi sirf ehsaason me…\n" +
+      "Ye to wo rishta hai jo rooh tak utar gaya hai…\n" +
+      "Jitna sochu utna hi gehra lagta hai,\n" +
+      "Jaise dil ne sirf aap ko chahne ke liye dhadakna seekha ho.” ❤️\n\n" +
+      "🌸 “Aap ki yaadon ka ek kone me bhi itna sukoon hai,\n" +
+      "Sochta hoon agar aap saamne ho to poori duniya kitni haseen lagne lagegi…” 🌸";
+
+    const shayariDiv = document.getElementById("shayari");
+    let i = 0;
+    function typeShayari() {
+      if (i < shayariText.length) {
+        shayariDiv.innerHTML += shayariText.charAt(i) === "\n" ? "<br>" : shayariText.charAt(i);
+        i++;
+        setTimeout(typeShayari, 50); // typing speed in ms
+      }
+    }
+    typeShayari();
 
     // Autoplay fallback for mobile browsers
     const bgMusic = document.getElementById("bgMusic");
