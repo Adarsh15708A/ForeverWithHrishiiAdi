@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hrishi and Adi 🌹❤️</title>
+  <title>Hrishi ❤️ Adi 🌹</title>
   <style>
     body {
       margin: 0; padding: 0;
@@ -36,21 +36,20 @@
       font-size: 18px;
       text-decoration: none;
     }
-    audio { display: none; }
   </style>
 </head>
 <body>
   <h1>🌹 Happy 5th Anniversary – Hrishi ❤️ Adi 🌹</h1>
 
   <div class="message">
-    Thank you for blooming in my life. I love you forever, Hrishi ❤️
+    Thank you for blooming in my life. I love you forever, Jaanuuu ❤️
   </div>
 
   <a class="drive-button" href="https://drive.google.com/drive/folders/1cWF7gmLEaBAVNVLhWf8g6MAZXOclQOYj?usp=drive_link" target="_blank">
     Click Here Jaanuuu 💖
   </a>
 
-  <audio autoplay loop>
+  <audio id="bgMusic" loop>
     <source src="https://www.dropbox.com/scl/fi/juodnskfyikm473hrs5jl/Meri-Aashiqui-Aashiqui-2-320-Kbps.mp3?rlkey=7i3wnt1df8qqg3oyfz3azy1fp&raw=1" type="audio/mpeg">
   </audio>
 
@@ -71,6 +70,17 @@
       setTimeout(() => r.remove(), 10000);
     }
     setInterval(createRose, 500);
+
+    // Autoplay logic with user interaction fallback
+    const bgMusic = document.getElementById("bgMusic");
+    function playMusic() {
+      bgMusic.play().catch(() => {
+        // Autoplay blocked, will play on user interaction
+      });
+    }
+    playMusic();
+    document.body.addEventListener("click", playMusic);
+    document.body.addEventListener("touchstart", playMusic);
   </script>
 </body>
 </html>
