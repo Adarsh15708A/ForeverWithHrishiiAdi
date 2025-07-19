@@ -94,7 +94,7 @@
         setTimeout(typeShayari, 50); // typing speed in ms
       }
     }
-    typeShayari();
+    window.onload = typeShayari;
 
     // Autoplay fallback for mobile browsers
     const bgMusic = document.getElementById("bgMusic");
