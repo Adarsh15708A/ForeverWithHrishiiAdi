@@ -1,205 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hrishi ❤️ Adi — Forever</title>
-  <style>
-    :root{
-      --pink:#d6336c;
-      --soft:#fff0f6;
-      --accent:#ff6b92;
-      --glass: rgba(255,255,255,0.18);
-      --glass-2: rgba(255,255,255,0.28);
-    }
-    html,body{height:100%; margin:0; padding:0; font-family: 'Segoe UI', system-ui, -apple-system, Roboto, 'Poppins', sans-serif; background: radial-gradient(circle at 10% 10%, #fff2f6 0%, #ffeef0 20%, #fff 100%); color: #2b0a20; overflow-x:hidden;}
-    .wrap{min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; padding:28px 16px 60px;}
-    header{margin-top:6px; text-align:center;}
-    h1{font-size:clamp(22px,4vw,36px); color:var(--pink); margin:8px 0 6px; letter-spacing:0.6px;}
-    h2{color: #9b1f4a; margin:12px 0;}
-    .subtitle{color:#5b2138; opacity:0.85; margin-bottom:8px;}
-    .rose{position:fixed; font-size:20px; pointer-events:none; z-index:1; animation:rise 10s linear infinite;}
-    @keyframes rise{0%{transform:translateY(100vh) scale(.6); opacity:0} 60%{opacity:1} 100%{transform:translateY(-20vh) scale(1.15); opacity:0}}
-    .card{width:100%; max-width:920px; background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.62)); border-radius:18px; padding:18px; box-shadow:0 10px 30px rgba(107,27,60,0.12); backdrop-filter: blur(6px); border:1px solid rgba(255,255,255,0.6);}
-    .top-row{display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap;}
-    .names {text-align:left;}
-    .names .couple{font-weight:700; font-size:18px; color:var(--accent);}
-    .together-box{background:var(--glass); padding:10px 14px; border-radius:12px; font-weight:600; color: #43122a;}
-    .gallery{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:12px;}
-    .gallery img{width:120px; height:120px; object-fit:cover; border-radius:12px; box-shadow:0 8px 18px rgba(0,0,0,0.12); border:4px solid rgba(255,255,255,0.7); transition:transform .25s}
-    .gallery img:hover{transform:scale(1.06)}
-    .manifesto{margin-top:18px; background:linear-gradient(90deg, rgba(255,220,230,0.6), rgba(255,240,245,0.55)); padding:18px; border-radius:12px; color:#3b1026; font-size:15px; line-height:1.5; text-align:left;}
-    .manifesto .big{font-size:18px; font-weight:700; color:var(--pink); margin-bottom:8px; text-align:center;}
-    .countdown{margin-top:14px; font-size:18px; display:flex; gap:10px; flex-wrap:wrap; justify-content:center; align-items:center;}
-    .countdown .time{background:var(--glass-2); padding:10px 12px; border-radius:10px; min-width:90px; font-weight:700; color: #4a122e;}
-    .actions{display:flex; gap:10px; justify-content:center; margin-top:14px; flex-wrap:wrap;}
-    .btn{background:var(--pink); color:white; border:none; padding:10px 16px; border-radius:999px; font-weight:700; text-decoration:none; cursor:pointer; box-shadow:0 6px 18px rgba(214,51,108,0.14)}
-    .btn.ghost{background:transparent; color:var(--pink); border:2px solid rgba(214,51,108,0.12)}
-    .popup{position:fixed; left:50%; top:50%; transform:translate(-50%,-50%) scale(0.98); background: linear-gradient(180deg,#fff,#fff0f7); border-radius:14px; padding:18px; width:90%; max-width:560px; box-shadow:0 20px 60px rgba(107,27,60,0.18); z-index:50; display:none;}
-    .popup.show{display:block; animation:pop .28s ease-out;}
-    @keyframes pop{from{transform:translate(-50%,-50%) scale(.9); opacity:0} to{transform:translate(-50%,-50%) scale(1); opacity:1}}
-    .popup .title{font-weight:800; color:var(--accent); margin-bottom:8px;}
-    .popup .close{position:absolute; right:14px; top:10px; background:transparent; border:none; font-weight:800; font-size:18px; color:#8a1f48; cursor:pointer}
-    .vows{font-size:14px; color:#4a122e; line-height:1.55;}
-    footer{margin-top:22px; color:#6f2a43; opacity:0.9; font-size:13px;}
-    @media (max-width:520px){
-      .gallery img{width:90px;height:90px}
-      .manifesto{font-size:14px}
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hrishi ❤️ Adi — Forever</title>
+<style>
+:root{
+  --pink:#d6336c;
+  --soft:#fff0f6;
+  --accent:#ff6b92;
+  --glass: rgba(255,255,255,0.18);
+  --glass-2: rgba(255,255,255,0.28);
+  --heart:#ff5a7c;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body,html{
+  height:100%;
+  font-family: 'Poppins', sans-serif;
+  overflow-x:hidden;
+  color:#2b0a20;
+  position:relative;
+  background: linear-gradient(270deg, #ffe0f0, #fff0f6, #ffe0f0);
+  background-size: 600% 600%;
+  animation:gradientBG 20s ease infinite;
+}
+@keyframes gradientBG {
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+.wrap{min-height:100vh; display:flex; flex-direction:column; align-items:center; padding:28px 16px 60px;}
+header{text-align:center;margin-top:10px;}
+h1{font-size:clamp(24px,5vw,40px); color:var(--pink); margin:10px 0; text-shadow:0 2px 8px rgba(255,100,150,0.6);}
+.subtitle{color:#5b2138; opacity:0.85; font-size:16px; text-shadow:0 1px 5px rgba(255,150,200,0.4);}
+.card{width:100%; max-width:900px; background:linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.65)); border-radius:18px; padding:20px; margin-top:20px; box-shadow:0 10px 40px rgba(214,51,108,0.15); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.5);}
+.top-row{display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap;}
+.names .couple{font-weight:700; font-size:20px; color:var(--accent);}
+.together-box{background:var(--glass); padding:10px 14px; border-radius:12px; font-weight:600; color:#43122a;}
+.gallery{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:20px;}
+.gallery-item{display:flex; flex-direction:column; align-items:center;}
+.gallery-item img{width:120px; height:120px; object-fit:cover; border-radius:12px; box-shadow:0 10px 20px rgba(0,0,0,0.15); border:4px solid rgba(255,255,255,0.7); transition: transform .25s; cursor:pointer;}
+.gallery-item img:hover{transform:scale(1.06);}
+.manifesto{margin-top:20px; background:linear-gradient(90deg, rgba(255,220,230,0.6), rgba(255,240,245,0.55)); padding:18px; border-radius:12px; color:#3b1026; font-size:15px; line-height:1.6;}
+.manifesto .big{font-size:18px; font-weight:700; color:var(--pink); text-align:center; margin-bottom:10px;}
+.countdown{margin-top:18px; font-size:18px; display:flex; gap:10px; flex-wrap:wrap; justify-content:center; align-items:center;}
+.countdown .time{background:var(--glass-2); padding:10px 12px; border-radius:10px; min-width:80px; font-weight:700; color:#4a122e;}
+.actions{display:flex; gap:10px; justify-content:center; margin-top:18px; flex-wrap:wrap;}
+.btn{background:var(--pink); color:white; border:none; padding:10px 16px; border-radius:999px; font-weight:700; text-decoration:none; cursor:pointer; box-shadow:0 6px 18px rgba(214,51,108,0.25);}
+.btn.ghost{background:transparent; color:var(--pink); border:2px solid rgba(214,51,108,0.25);}
+.popup{position:fixed; left:50%; top:50%; transform:translate(-50%,-50%) scale(0.98); background:linear-gradient(180deg,#fff,#fff0f7); border-radius:14px; padding:20px; width:90%; max-width:560px; box-shadow:0 20px 60px rgba(107,27,60,0.18); z-index:50; display:none;}
+.popup.show{display:block; animation:pop .28s ease-out;}
+@keyframes pop{from{transform:translate(-50%,-50%) scale(.9); opacity:0} to{transform:translate(-50%,-50%) scale(1); opacity:1}}
+.popup .title{font-weight:800; color:var(--accent); margin-bottom:8px; text-align:center;}
+.popup .close{position:absolute; right:14px; top:10px; background:transparent; border:none; font-weight:800; font-size:18px; color:#8a1f48; cursor:pointer}
+.vows{font-size:14px; color:#4a122e; line-height:1.55; text-align:left;}
+footer{margin-top:25px; color:#6f2a43; opacity:0.9; font-size:14px; text-align:center;}
+
+/* Floating elements */
+.floating{
+  position:fixed;
+  pointer-events:none;
+  z-index:1;
+  opacity:0;
+  animation:floatRise linear forwards, floatSwing 4s ease-in-out infinite alternate;
+  text-shadow:0 2px 6px rgba(255,150,200,0.6);
+}
+@keyframes floatRise{
+  0%{transform:translateY(100vh) scale(0.6); opacity:0;}
+  10%{opacity:1;}
+  100%{transform:translateY(-20vh) scale(1.2); opacity:0;}
+}
+@keyframes floatSwing{
+  0%{transform:translateX(0);}
+  100%{transform:translateX(15px);}
+}
+
+.lightbox{position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); display:flex; justify-content:center; align-items:center; z-index:100; display:none;}
+.lightbox img{max-width:90%; max-height:90%; border-radius:12px; box-shadow:0 8px 30px rgba(0,0,0,0.3);}
+@media(max-width:520px){.gallery-item img{width:90px;height:90px;}.manifesto{font-size:14px;}}
+</style>
 </head>
 <body>
-  <div id="rosesRoot"></div>
+<div class="wrap">
+<header>
+<h1>🌹 Hrishi ❤️ Adi — Ek Amar Prem Katha 🌹</h1>
+<div class="subtitle">Jahan Shiv-Parvati jaisa aashiqana bandhan, Ram-Sita jaisa shraddha — wahin humara rishta.</div>
+</header>
 
-  <div class="wrap">
-    <header>
-      <h1>🌹 Hrishi ❤️ Adi — Ek Amar Prem Katha 🌹</h1>
-      <div class="subtitle">Jahan Shiv-Parvati jaisa aashiqana bandhan, Ram-Sita jaisa shraddha—wahin humara rishta.</div>
-    </header>
+<main class="card">
+<div class="top-row">
+<div class="names">
+<div class="couple">Hrishi ✦ Adi</div>
+<div style="font-size:13px; color:#5a2b43; margin-top:4px;">Tum meri devi ho — main tumhara bhagat. Har saans me tumhara naam.</div>
+</div>
+<div class="together-box" title="Together Since">
+<div style="font-size:12px; opacity:0.9">Together since</div>
+<div id="sinceDate" style="font-size:14px; margin-top:4px; font-weight:800;">19 March 2025 • 12:02</div>
+</div>
+</div>
 
-    <main class="card" role="main" aria-labelledby="main-heading">
-      <div class="top-row">
-        <div class="names">
-          <div class="couple">Hrishi ✦ Adi</div>
-          <div style="font-size:13px; color:#5a2b43; margin-top:4px;">Tum meri devi ho — main tumhara bhagat. Har saans me tumhara naam.</div>
-        </div>
+<section>
+<h2 style="margin:10px 0;">Our Future Memories — Hum Saath Hai 📸</h2>
+<div class="gallery" id="gallery"></div>
+</section>
 
-        <div class="together-box" title="Together Since">
-          <div style="font-size:12px; opacity:0.9">Together since</div>
-          <div id="sinceDate" style="font-size:14px; margin-top:4px; font-weight:800;">19 March 2025 • 12:02</div>
-        </div>
-      </div>
+<section class="manifesto">
+<div class="big">Divine Love Manifesto — Hamari Pyaari Dastan</div>
+<div id="manifestoText"></div>
+</section>
 
-      <!-- gallery with your real Google Drive images -->
-      <section style="margin-top:14px;">
-        <h2 style="margin:6px 0 10px;">Our Memories — Khushbu Wali Yaadein 📸</h2>
-        <div class="gallery" id="gallery">
-          <img src="https://drive.google.com/uc?export=view&id=1_eySp0sMBaeQohKuIE70CqmeFvlrRS8c" alt="Memory 1">
-          <img src="https://drive.google.com/uc?export=view&id=1egaWJEmoAHgoJlApRMe196gkUelyHaxj" alt="Memory 2">
-          <img src="https://drive.google.com/uc?export=view&id=1ipmPRkJ0voUk2yllMZM3eWZeBOwd6QKv" alt="Memory 3">
-          <img src="https://drive.google.com/uc?export=view&id=146RPK998knObmU874BOYXo13il4yaIDC" alt="Memory 4">
-        </div>
-      </section>
+<div class="countdown">
+<div style="font-weight:700; color:#611936;">⏳ Humari Saath-Saath Ka Har Pal</div>
+<div id="elapsed" style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center;">
+<div class="time" id="days">0d</div>
+<div class="time" id="hours">0h</div>
+<div class="time" id="mins">0m</div>
+<div class="time" id="secs">0s</div>
+</div>
+</div>
 
-      <section class="manifesto" aria-live="polite">
-        <div class="big">Divine Love Manifesto — Hamari Pyaari Dastan</div>
-        <div id="manifestoText"></div>
-      </section>
+<div class="actions">
+<button class="btn" id="openVow">Click for My Eternal Vow ✨</button>
+<a class="btn ghost" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1cWF7gmLEaBAVNVLhWf8g6MAZXOclQOYj?usp=drive_link">Our Secret Folder (Drive)</a>
+</div>
+</main>
 
-      <div class="countdown" aria-live="polite" role="status" style="margin-top:12px;">
-        <div style="font-weight:700; color:#611936;">⏳ Humari Saath-Saath Ka Har Pal</div>
-        <div id="elapsed" style="display:flex; gap:8px; margin-left:8px; flex-wrap:wrap; justify-content:center;">
-          <div class="time" id="days">0d</div>
-          <div class="time" id="hours">0h</div>
-          <div class="time" id="mins">0m</div>
-          <div class="time" id="secs">0s</div>
-        </div>
-      </div>
+<footer>Jaan, tum meri devi ho — main tumhara bhakta. Har breath tumhare naam. ❤️</footer>
+</div>
 
-      <div class="actions">
-        <button class="btn" id="openVow">Click for My Eternal Vow ✨</button>
-        <a class="btn ghost" id="openDrive" target="_blank" rel="noopener">Our Secret Folder (Drive)</a>
-      </div>
-    </main>
+<div class="popup" id="vowPopup">
+<button class="close" id="closeVow">&times;</button>
+<div class="title">Meri Vachan-Patra — Tumhare Liye</div>
+<div class="vows">
+<p>Priye Adi,</p>
+<p>Main, Hrishi, aaj se hamesha ke liye yeh vachan deta hoon: jaise Shiv ne Parvati ko anant tapasya se paaya, waise hi main tumhe apne dil ki bhakti se paata rahunga. Tum meri devi ho; tumhare har aansu ko main apna kar lunga, tumhare har sapne ko apna karunga.</p>
+<p style="margin-top:10px; font-weight:700; color:var(--pink)">— Hamesha tumhara, Hrishi</p>
+</div>
+</div>
 
-    <footer>Jaan, tum meri devi ho — main tumhara bhakta. Har breath tumhare naam. ❤️</footer>
-  </div>
+<div class="lightbox" id="lightbox">
+<img src="" alt="Enlarged memory">
+</div>
 
-  <div class="popup" id="vowPopup" role="dialog" aria-modal="true" aria-labelledby="vowTitle">
-    <button class="close" id="closeVow">&times;</button>
-    <div class="title" id="vowTitle">Meri Vachan-Patra — Tumhare Liye</div>
-    <div class="vows">
-      <p>Priye Hrishi,</p>
-      <p>Main, Adi, aaj se hamesha ke liye yeh vachan deta hoon: jaise Shiv ne Parvati ko anant tapasya se paaya, waise hi main tumhe apne dil ki bhakti se paata rahunga. Tum meri devi ho; tumhare har aansu ko main apna kar lunga, tumhare har sapne ko apna karunga.</p>
-      <p>Jab tak suraj-chand rahenge, main tumhara saath nibhaunga — Ram ki shraddha jaisa wafadari, Sita ki pyaar jaisa nishtha. Har raah me tumhara haath tham kar chalunga. Main tera bhagat hoon; tum meri puja ho. Yeh mera wada hai—aj, kal aur hamesha.</p>
-      <p style="margin-top:10px; font-weight:700; color:var(--pink)">— Hamesha tumhara, Hrishi</p>
-    </div>
-  </div>
+<audio id="bgMusic" loop>
+<source src="https://www.dropbox.com/scl/fi/feoijre7cl58uwmqof7ek/Tu-Hi-To-Jannat-Meri.mp3?rlkey=gxl48it860382mvq4hfft1hoj&raw=1" type="audio/mpeg">
+</audio>
 
-  <audio id="bgMusic" loop>
-    <source src="https://www.dropbox.com/scl/fi/6og4gw2ow8qqkqc3j4jxn/Tum-Hi-Ho-From-Aashiqui-2.mp3?rlkey=m66eqbg4t250wh13j61h380uv&raw=1" type="audio/mpeg">
-  </audio>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
 
-  <script>
-    const togetherSince = new Date("March 19, 2025 12:02:00").getTime();
-    const driveLink = "https://drive.google.com/drive/folders/1cWF7gmLEaBAVNVLhWf8g6MAZXOclQOYj?usp=drive_link";
-    document.getElementById('openDrive').href = driveLink;
+  // Gallery
+  const galleryData = [
+    {id:"1_eySp0sMBaeQohKuIE70CqmeFvlrRS8c", caption:"Hamari muskaan, hamari duniya — bas hum, ek saath."},
+    {id:"1egaWJEmoAHgoJlApRMe196gkUelyHaxj", caption:"Har pal tumhare saath, har lamha pyaar ka."},
+    {id:"1ipmPRkJ0voUk2yllMZM3eWZeBOwd6QKv", caption:"Yeh zindagi ka safar, hum dono ke naam."},
+    {id:"146RPK998knObmU874BOYXo13il4yaIDC", caption:"Aaj, kal, hamesha — bas tum aur main."}
+  ];
+  const galleryEl = document.getElementById('gallery');
+  galleryData.forEach(item=>{
+    const div=document.createElement('div');
+    div.className='gallery-item';
+    div.innerHTML=`<img src="https://drive.google.com/uc?export=view&id=${item.id}" alt="Memory"><p>${item.caption}</p>`;
+    galleryEl.appendChild(div);
+  });
 
-    const roseMessages = [
-      "Tum meri devi ho",
-      "Shiv-Parvati jaisa pyaar",
-      "Ram-Sita ki shraddha",
-      "Main tumhara bhagat",
-      "Forever & Always",
-      "Tumhara har muskurana meri jeet"
-    ];
+  // Countdown
+  const togetherSince=new Date("March 19, 2025 12:02:00").getTime();
+  function updateElapsed(){
+    const now=Date.now();
+    let diff=now-togetherSince;
+    const days=Math.floor(diff/(1000*60*60*24)); diff-=days*(1000*60*60*24);
+    const hours=Math.floor(diff/(1000*60*60)); diff-=hours*(1000*60*60);
+    const mins=Math.floor(diff/(1000*60)); diff-=mins*(1000*60);
+    const secs=Math.floor(diff/1000);
+    document.getElementById('days').innerText=days+"d";
+    document.getElementById('hours').innerText=hours+"h";
+    document.getElementById('mins').innerText=mins+"m";
+    document.getElementById('secs').innerText=secs+"s";
+  }
+  updateElapsed(); setInterval(updateElapsed,1000);
 
-    function makeRose(){
-      const d = document.createElement('div');
-      d.className = 'rose';
-      const left = Math.random()*95;
-      d.style.left = left + 'vw';
-      d.style.fontSize = (14 + Math.random()*22) + 'px';
-      d.style.opacity = (0.7 + Math.random()*0.3);
-      const msg = roseMessages[Math.floor(Math.random()*roseMessages.length)];
-      d.innerHTML = "🌹<br><span style='font-size:12px;color:#6a2138;font-weight:700;line-height:1'>" + msg + "</span>";
-      document.body.appendChild(d);
-      setTimeout(()=> d.remove(), 10000 + Math.random()*4000);
-    }
-    setInterval(makeRose, 600);
+  // Manifesto
+  const manifestoLines=[
+    "Jab se 19 March 2025, 12:02 pe tum meri zindagi me aayi — har saans pe tumhara naam likha gaya.",
+    "Tum mere liye Shiv-Parvati ki devi ho — shakti aur komalta ka sangam. Tumhari muskaan mere liye tapasya ka phal hai.",
+    "Hamari prem kahani me shraddha hai, wafadari hai, aur ek aisi bhakti jo har kathin raste ko roshan kar de.",
+    "Main tumhara bhagat hoon: tumhara dard mera dard, tumhari khushi mera jeet. Main har subah tumhari surat apne man me dekhunga.",
+    "Jahan Ram ne Sita ke saath anant vishwas nibhaya, wahi vishwas main tumse karta hoon — kabhi na tootne wala, kabhi na kam hoga.",
+    "Yeh sirf shabd nahi; yeh mera jeevan-sankalp hai — aj, kal, hamesha. Tum meri devi, main tumhara bhakt — hum sadaiv ek."
+  ];
+  const manifestoEl=document.getElementById('manifestoText');
+  (function reveal(i=0){
+    if(i>=manifestoLines.length) return;
+    const p=document.createElement('p');
+    p.style.margin='6px 0'; p.style.opacity='0'; p.style.transition='opacity .8s ease';
+    p.innerText=manifestoLines[i]; manifestoEl.appendChild(p);
+    setTimeout(()=>p.style.opacity='1',150); setTimeout(()=>reveal(i+1),700);
+  })();
 
-    function updateElapsed(){
-      const now = Date.now();
-      let diff = now - togetherSince;
-      const days = Math.floor(diff / (1000*60*60*24));
-      diff -= days*(1000*60*60*24);
-      const hours = Math.floor(diff / (1000*60*60));
-      diff -= hours*(1000*60*60);
-      const mins = Math.floor(diff / (1000*60));
-      diff -= mins*(1000*60);
-      const secs = Math.floor(diff / 1000);
-      document.getElementById('days').innerText = days + "d";
-      document.getElementById('hours').innerText = hours + "h";
-      document.getElementById('mins').innerText = mins + "m";
-      document.getElementById('secs').innerText = secs + "s";
-    }
-    updateElapsed();
-    setInterval(updateElapsed, 1000);
+  // Vow popup
+  const openVow=document.getElementById('openVow'), vowPopup=document.getElementById('vowPopup'), closeVow=document.getElementById('closeVow');
+  openVow.addEventListener('click',()=>vowPopup.classList.add('show'));
+  closeVow.addEventListener('click',()=>vowPopup.classList.remove('show'));
+  window.addEventListener('click',e=>{if(e.target===vowPopup)vowPopup.classList.remove('show');});
 
-    const manifestoLines = [
-      "Jab se 19 March 2025, 12:02 pe tum meri zindagi me aayi — har saans pe tumhara naam likha gaya.",
-      "Tum mere liye Shiv-Parvati ki devi ho — shakti aur komalta ka sangam. Tumhari muskaan mere liye tapasya ka phal hai.",
-      "Hamari prem kahani me shraddha hai, wafadari hai, aur ek aisi bhakti jo har kathin raste ko roshan kar de.",
-      "Main tumhara bhagat hoon: tumhara dard mera dard, tumhari khushi mera jeet. Main har subah tumhari surat apne man me dekhunga.",
-      "Jahan Ram ne Sita ke saath anant vishwas nibhaya, wahi vishwas main tumse karta hoon — kabhi na tootne wala, kabhi na kam hoga.",
-      "Yeh sirf shabd nahi; yeh mera jeevan-sankalp hai — aj, kal, hamesha. Tum meri devi, main tumhara bhakt — hum sadaiv ek."
-    ];
-    const manifestoEl = document.getElementById('manifestoText');
-    (function revealManifesto(i = 0){
-      if(i >= manifestoLines.length) return;
-      const p = document.createElement('p');
-      p.style.margin = '8px 0';
-      p.style.opacity = '0';
-      p.style.transition = 'opacity .8s ease, transform .8s ease';
-      p.innerText = manifestoLines[i];
-      manifestoEl.appendChild(p);
-      setTimeout(()=>{ p.style.opacity = '1'; p.style.transform = 'translateY(0)'; }, 120);
-      setTimeout(()=> revealManifesto(i+1), 700);
-    })();
+  // Background music autoplay
+  const bgMusic=document.getElementById('bgMusic');
+  function tryPlayMusic(){ bgMusic.play().catch(()=>{}); }
+  tryPlayMusic();
+  document.body.addEventListener('click',tryPlayMusic,{once:true});
+  document.body.addEventListener('touchstart',tryPlayMusic,{once:true});
 
-    const openVow = document.getElementById('openVow');
-    const vowPopup = document.getElementById('vowPopup');
-    const closeVow = document.getElementById('closeVow');
-    openVow.addEventListener('click', ()=> { vowPopup.classList.add('show'); });
-    closeVow.addEventListener('click', ()=> { vowPopup.classList.remove('show'); });
-    window.addEventListener('click', (e)=>{ if(e.target === vowPopup) vowPopup.classList.remove('show'); });
+  // Lightbox
+  const lightbox=document.getElementById('lightbox');
+  document.querySelectorAll('.gallery-item img').forEach(img=>{
+    img.addEventListener('click',()=>{lightbox.querySelector('img').src=img.src; lightbox.style.display='flex';});
+  });
+  lightbox.addEventListener('click',()=>lightbox.style.display='none');
 
-    const bgMusic = document.getElementById('bgMusic');
-    function tryPlayMusic(){ bgMusic.play().catch(()=>{}); }
-    tryPlayMusic();
-    document.body.addEventListener('click', tryPlayMusic, {once:true});
-    document.body.addEventListener('touchstart', tryPlayMusic, {once:true});
-  </script>
+  // Floating hearts, roses & shayari
+  const floatingMessages=[
+    "Tum meri devi ho","Shiv-Parvati jaisa pyaar","Ram-Sita ki shraddha","Main tumhara bhagat",
+    "Forever & Always","Hamari zindagi ek kahani","Har pal tumhara naam","Pyaar ki har baat humare saath"
+  ];
+  function createFloating(){
+    const div=document.createElement('div');
+    div.className='floating';
+    div.style.left=Math.random()*95+'vw';
+    div.style.fontSize=(12+Math.random()*16)+'px';
+    div.style.animationDuration=(8+Math.random()*6)+'s';
+    const type=Math.random();
+    if(type<0.35) div.innerHTML="🌹";
+    else if(type<0.7) div.innerHTML="❤️";
+    else div.innerHTML=floatingMessages[Math.floor(Math.random()*floatingMessages.length)];
+    document.body.appendChild(div);
+    setTimeout(()=>div.remove(),12000);
+  }
+  setInterval(createFloating,500);
+
+});
+</script>
 </body>
 </html>
-
